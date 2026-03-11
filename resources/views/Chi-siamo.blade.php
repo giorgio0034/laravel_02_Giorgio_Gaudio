@@ -1,30 +1,3 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  </head>
-  <body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet " href="/style.css">
 
 
 </head>
@@ -48,10 +22,10 @@
           <a class="nav-link active" aria-current="page" href="/Home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/Pagina1">Pagina1</a>
+          <a class="nav-link" href="/Chi-siamo">Chi-siamo</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link" href="/Pagina2">Pagina2</a>
+          <a class="nav-link" href="/Servizi">Servizi</a>
         </li>
 
       </ul>
@@ -63,14 +37,73 @@
   </div>
 </nav>
 
+<div class="container-fluid bg-body-secondary ">
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12">
+            <h1 class="text-center display-4">
+                chi siamo?
+            </h1>
+        </div>
+    </div>
+</div>
 
+
+<div class="container-fluid bg-body-secondary vh-100 bg-background">
+<div class="row justify-content-center align-items-center mt-5">
+
+@foreach($players as $player)
+
+<div class="col-12 col-md-3">
+    <div class="card mx-auto">
+        <img src="..." class="card-img-top" alt="">
+        <div class="card-body">
+            <h5 class="card-title">{{$player['name']}} {{$player['surname']}}</h5>
+            <p class="card-text">{{$player['gender']}}</p>
+            <a href="{{route('player.detail',['name'=>$player['name']])}}" class="btn btn-primary">Vai al dettaglio</a>
+        </div>
+    </div>
+</div>
+
+@endforeach
+
+</div>
+
+    </div>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-
-
-    <h1>La mia Home</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

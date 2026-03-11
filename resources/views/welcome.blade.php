@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
+<link rel="stylesheet " href="/style.css">
 
 </head>
 <body>
@@ -18,13 +18,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/Home">Home</a>
+          <a class="nav-link active" aria-current="page" href="{{ route('homepage')}}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/Pagina1">Pagina1</a>
+          <a class="nav-link" href="{{ route('chi.siamo')}}">Chi-siamo</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link" href="/Pagina2">Pagina2</a>
+          <a class="nav-link" href="/Servizi">Servizi</a>
         </li>
 
       </ul>
@@ -35,6 +35,41 @@
     </div>
   </div>
 </nav>
+
+<div class="container-fluid bg-body-secondary vh-100 bg-background">
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12">
+            <h1 class="text-center display-4 title my-5" >
+                Benvenuto {{$titolo}}
+            </h1>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
